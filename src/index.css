@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .subMenuClose {
+    @apply fixed z-20 top-0 -right-full bottom-0 bg-white dark:bg-zinc-700 w-64 min-h-screen pt-3 px-4 transition-all;
+  }
+  .subMenuOpen {
+    @apply fixed  z-20 top-0 right-0 bottom-0 bg-white dark:bg-zinc-700 w-64 min-h-screen pt-3 px-4 transition-all;
+  }
+  .userBasketClose {
+    @apply fixed z-20  flex-col justify-between py-5 px-4 top-0 -left-full bottom-0 w-64 min-h-screen bg-white dark:bg-zinc-700;
+  }
+  .userBasketOpen {
+    @apply fixed z-20 flex flex-col justify-between py-5 px-4 top-0 left-0 bottom-0 w-64 min-h-screen bg-white dark:bg-zinc-700;
+  }
+}
+
 @layer base {
   @font-face {
     font-family: "Dana"; /*400*/
@@ -37,7 +52,7 @@
 
 body {
   font-family: dana;
-  background-image: url("../public/images/headerBgDesktop.png");
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }

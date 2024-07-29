@@ -1,5 +1,18 @@
+import { IoHomeOutline } from "react-icons/io5";
+import { MdOutlineShoppingBag } from "react-icons/md";
+import { BiMessageDetail } from "react-icons/bi";
+import { PiBagBold } from "react-icons/pi";
+import { GrDocumentText } from "react-icons/gr";
+import { MdOutlinePermPhoneMsg } from "react-icons/md";
+
 let menus = [
-  { id: 1, title: "صفحه اصلی", subMenu: [], status: true },
+  {
+    id: 1,
+    title: "صفحه اصلی",
+    subMenu: [],
+    icon: <IoHomeOutline className="w-5 h-5" />,
+    status: true,
+  },
   {
     id: 2,
     title: "فروشگاه",
@@ -11,74 +24,32 @@ let menus = [
       { id: 5, title: "کپسول قهوه" },
       { id: 6, title: "قهوه زینو برزیلی" },
     ],
+    icon: <MdOutlineShoppingBag className="w-5 h-5" />,
   },
   {
     id: 3,
     title: "دیکشنری",
-    subMenu: [
-      {
-        id: 1,
-        title: "تعاریف",
-      },
-      {
-        id: 2,
-        title: "مرادف‌ها",
-      },
-      {
-        id: 3,
-        title: "مضادها",
-      },
-      {
-        id: 4,
-        title: "مثال‌های کاربردی",
-      },
-    ],
+    subMenu: [],
+    icon: <BiMessageDetail className="w-5 h-5" />,
   },
   {
     id: 4,
     title: "بلاگ",
-    subMenu: [
-      {
-        id: 1,
-        title: "آخرین نوشته‌ها",
-      },
-      {
-        id: 2,
-        title: "پربازدیدترین نوشته‌ها",
-      },
-      {
-        id: 3,
-        title: "نوشته‌های برگزیده",
-      },
-      {
-        id: 4,
-        title: "نوشته‌های پیشنهادی",
-      },
-      {
-        id: 5,
-        title: "نقد و بررسی‌ها",
-      },
-      {
-        id: 6,
-        title: "آرشیو نوشته‌ها",
-      },
-    ],
+    subMenu: [],
+    icon: <PiBagBold className="w-5 h-5" />,
   },
   {
     id: 5,
     title: "درباره ما",
-    subMenu: [
-      {
-        id: 1,
-        title: "تاریخچه",
-      },
-      {
-        id: 2,
-        title: "تیم ما",
-      },
-    ],
+    subMenu: [],
+    icon: <GrDocumentText className="w-5 h-5" />,
   },
-  { id: 6, title: "تماس با ما", subMenu: [] },
+  {
+    id: 6,
+    title: "تماس با ما",
+    subMenu: [],
+    icon: <MdOutlinePermPhoneMsg className="w-5 h-5" />,
+  },
 ];
 
 const products = [
@@ -107,7 +78,7 @@ const products = [
     count: 20,
     price: 150000,
     discount: 15000,
-    popularity: 5,
+    popularity: 5000,
     img: "./images/products/p3.png",
     title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
   },
@@ -178,6 +149,25 @@ let userBasket = [
     price: 200000,
     popularity: 3000,
     img: "./images/products/p2.png",
+    title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
+  },
+  {
+    id: 3,
+    name: "Product 3",
+    count: 20,
+    price: 150000,
+    discount: 15000,
+    popularity: 5000,
+    img: "./images/products/p3.png",
+    title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
+  },
+  {
+    id: 4,
+    name: "Product 4",
+    count: 40,
+    price: 80000,
+    popularity: 2000,
+    img: "./images/products/p4.png",
     title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
   },
 ];
