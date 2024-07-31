@@ -43,7 +43,7 @@ export default function Header() {
   return (
     <>
       {/* App Header */}
-      <header className="fixed top-9 max-md:hidden right-0 left-0 bg-black/50 w-[98%] lg:w-[90%] mx-auto px-5 lg:px-10 py-5 h-24 rounded-3xl items-center backdrop-blur-[6px]">
+      <header className="fixed z-50 top-9 max-md:hidden right-0 left-0 bg-black/50 w-[98%] lg:w-[90%] mx-auto px-5 lg:px-10 py-5 h-24 rounded-3xl items-center backdrop-blur-[6px]">
         <div className="flex w-full justify-between items-center">
           <nav className="flex gap-x-5 lg:gap-x-9 items-center">
             <div className="shrink-0">
@@ -94,8 +94,8 @@ export default function Header() {
                   {userBasket.length}
                 </span>
 
-                <div className="absolute max-h-[530px] overflow-y-scroll overflow-x-hidden delay-75 top-[130%] opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white dark:bg-zinc-700 border-t-[3px] border-t-orange-300 shadow-normal rounded-2xl transition-all w-[400px] p-5 left-0">
-                  <div className="p-y-[60px] p-x-[72px] flex flex-col justify-evenly space-y-5 items-center min-h-80">
+                <div className="absolute max-h-[530px] overflow-x-hidden delay-75 top-[130%] opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white dark:bg-zinc-700 border-t-[3px] border-t-orange-300 shadow-normal rounded-2xl transition-all w-[400px] p-5 left-0">
+                  <div className="p-y-[60px] p-x-[72px] flex flex-col justify-between space-y-5 items-center min-h-80">
                     {userBasket.length === 0 ? (
                       <>
                         <div className="flex flex-col space-y-3 items-center">
@@ -114,7 +114,9 @@ export default function Header() {
                     ) : (
                       <>
                         <div className="flex items-center justify-between text-xs w-full tracking-thigtest">
-                          <span className="text-gray-300">1 مورد</span>
+                          <span className="text-gray-300">
+                            {userBasket.length} مورد
+                          </span>
                           <a
                             href="#"
                             className="flex items-start text-orange-300"
@@ -123,39 +125,41 @@ export default function Header() {
                             <IoIosArrowBack className="text-xs" />
                           </a>
                         </div>
-                        {userBasket.map((product) => (
-                          <div
-                            key={product.id}
-                            className="border-b-[1px] border-b-gray-300 dark:border-b-white/10 flex items-center space-x-[10px] pb-6"
-                          >
-                            <img
-                              src={`${product.img}`}
-                              alt="product"
-                              className="size-32"
-                            />
-                            <div className="text-zinc-700 h-full dark:text-white space-y-6 flex flex-col justify-between">
-                              <p className="font-semibold line-clamp-2">
-                                {product.title}
-                              </p>
-                              <div className="flex flex-col">
-                                {product.discount && (
-                                  <span className="text-teal-600 text-xs tracking-thigtest">
-                                    {product.discount.toLocaleString()} تومان
-                                    تخفیف
+                        <div className="h-[380px] overflow-y-scroll border-t-2 border-t-orange-200 border-b-2 border-b-orange-200 rounded-xl ">
+                          {userBasket.map((product) => (
+                            <div
+                              key={product.id}
+                              className="border-b-[1px] border-b-gray-300 dark:border-b-white/10 flex items-center space-x-[10px] pb-6"
+                            >
+                              <img
+                                src={`${product.img}`}
+                                alt="product"
+                                className="size-32"
+                              />
+                              <div className="text-zinc-700 h-full dark:text-white space-y-6 flex flex-col justify-between">
+                                <p className="font-semibold line-clamp-2">
+                                  {product.title}
+                                </p>
+                                <div className="flex flex-col">
+                                  {product.discount && (
+                                    <span className="text-teal-600 text-xs tracking-thigtest">
+                                      {product.discount.toLocaleString()} تومان
+                                      تخفیف
+                                    </span>
+                                  )}
+                                  <span className="text-xl dark:text-white font-semibold">
+                                    {(product.discount &&
+                                      (
+                                        product.price - product.discount
+                                      ).toLocaleString()) ||
+                                      product.price.toLocaleString()}{" "}
+                                    <span className="text-sm">تومان</span>
                                   </span>
-                                )}
-                                <span className="text-xl dark:text-white font-semibold">
-                                  {(product.discount &&
-                                    (
-                                      product.price - product.discount
-                                    ).toLocaleString()) ||
-                                    product.price.toLocaleString()}{" "}
-                                  <span className="text-sm">تومان</span>
-                                </span>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                         <div className="flex justify-between w-full items-center">
                           <div>
                             <span className="text-gray-300 text-xs tracking-thigtest">
@@ -212,7 +216,11 @@ export default function Header() {
           className="w-6 h-6 font-medium text-zinc-700 dark:text-white"
         />
         {/* Menu */}
-        <div className={`${(showMenu && "subMenuOpen") || "subMenuClose"}`}>
+        <div
+          className={`${
+            (showMenu && "subMenuOpen") || "subMenuClose"
+          } overflow-y-scroll`}
+        >
           {/* Mobail Nav Heding */}
           <div className="flex items-center justify-between border-b pb-5 mb-6 border-b-gray-100 dark:border-b-white/10">
             <div className="flex items-center gap-x-3.5 ">
@@ -429,26 +437,6 @@ export default function Header() {
         </div>
       </div>
       {/* App Main */}
-
-      <main>
-        <section className="home max-md:bg-[url(../public/images/headerBgDesktop.png)]">
-          <div className="container h-[200px] md:min-h-screen flex justify-end items-center ">
-            <div className="text-white md:ml-28">
-              <h2 className="font-MorabbaBold shadow-normal max-md:text-2xl md:text-5xl max-md:mb-0.5 md:mb-2">
-                قهوه عربیکا تانزانیا
-              </h2>
-              <span className="font-MorabbaLight shadow-normal max-md:text-xl md:text-4xl">
-                یک فنجان بالانس !
-              </span>
-              <span className="block w-[100px] max-md:h-px md:h-0.5 bg-orange-300 max-md:my-3 md:my-8"></span>
-              <p className="font-Dana max-md:w-[201px] md:max-w-[400px] shadow-normal max-md:text-xs md:text-xl">
-                قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه
-                است که در نواحی مختلف کمربند قهوه کشت میشود.
-              </p>
-            </div>
-          </div>
-        </section>
-      </main>
 
       {showMenu && (
         <div

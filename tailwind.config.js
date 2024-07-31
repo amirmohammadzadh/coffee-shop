@@ -38,8 +38,13 @@ export default {
           lg: "0.625rem",
         },
       },
+      backgroundImage: {
+        "home-mobail": "url(../public/images/headerBgMobile.webp)",
+        "home-desctop": "url(../public/images/headerBgDesktop.png)",
+      },
     },
     screens: {
+      xs: "480px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
