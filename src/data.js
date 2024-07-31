@@ -170,6 +170,40 @@ let userBasket = [
     img: "./images/products/p4.png",
     title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
   },
+  {
+    id: 5,
+    name: "Product 5",
+    count: 60,
+    price: 120000,
+    discount: 5000,
+    popularity: 4,
+    img: "./images/products/p3.png",
+    title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
+  },
+  {
+    id: 6,
+    name: "Product 6",
+    count: 0,
+    price: 250000,
+    popularity: 3,
+    img: "./images/products/p4.png",
+    title: "قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی",
+  },
 ];
 
-export { menus, products, userBasket };
+let categorys = [
+  {
+    id: 1,
+    title: "انواع قهوه",
+    subtitle: "ترکیبی و تک خاستگاه",
+    img: "./images/categories/category-right.jpg",
+  },
+  {
+    id: 1,
+    title: "انواع پودر های فوری",
+    subtitle: "نسکافه ، هات چاکلت ، ماسالا",
+    img: "./images/categories/category-left.jpg",
+  },
+];
+
+export { menus, products, userBasket, categorys };

@@ -16,7 +16,7 @@ export default function Product({
   return (
     <div className="flex relative flex-col items-center max-md:gap-y-2 md:gap-y-5 max-md:p-2 md:p-5 bg-white shadow-normal dark:bg-zinc-700 rounded-2xl">
       {discount && count > 0 && (
-        <span className="absolute text-zinc-700 bg-orange-300 pt-1 pb-[3px] px-3.5 right-6 top-6 rounded-[100px] font-semibold">
+        <span className="absolute text-zinc-700 bg-orange-300 max-xs:w-[40px] max-xs:h-[20px] xs:w-[53px] xs:h-[30px] max-xs:pt-1 xs:pt-[3px] xs:pl-[3px] flex items-center justify-center max-xs:right-2.5 max-xs:top-2.5 xs:right-6 xs:top-6 rounded-[100px] font-semibold">
           {((discount / price) * 100).toFixed() || ""}%
         </span>
       )}
@@ -38,7 +38,7 @@ export default function Product({
                     {(price - discount).toLocaleString()}{" "}
                     <span className="text-sm tracking-thigtest">تومان</span>
                   </p>
-                  <p className="text-red-500 line-through">
+                  <p className="text-red-500 max-xs:text-xs max-sm:text-base md:text-xl line-through">
                     {price.toLocaleString()}
                   </p>
                 </div>
@@ -51,7 +51,7 @@ export default function Product({
                 </p>
               )}
             </div>
-          )) || <p className="text-red-400">فعلا موجود نیست</p>}
+          )) || <p className="text-red-400 max-xs:text-xs max-sm:text-base md:text-xl">فعلا موجود نیست</p>}
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center max-md:gap-x-2.5 md:gap-x-4 text-gray-400">

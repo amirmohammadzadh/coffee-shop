@@ -419,7 +419,7 @@ export default function Header() {
             ))}
           </div>
           {/* Basket Footer */}
-          <div className="flex justify-between w-full">
+          <div className="flex justify-between w-full pt-3">
             <a
               href="#"
               className="text-white py-2.5 px-4 bg-teal-600 dark:bg-emerald-500 rounded-xl"
