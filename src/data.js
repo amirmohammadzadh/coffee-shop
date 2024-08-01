@@ -199,7 +199,7 @@ let categorys = [
     img: "./images/categories/category-right.jpg",
   },
   {
-    id: 1,
+    id: 2,
     title: "انواع پودر های فوری",
     subtitle: "نسکافه ، هات چاکلت ، ماسالا",
     img: "./images/categories/category-left.jpg",

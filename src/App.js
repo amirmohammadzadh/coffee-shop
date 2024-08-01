@@ -4,6 +4,7 @@ import Main from "./Components/Main/Main";
 import Products from "./Components/Products/Products";
 import Category from "./Components/Category/Category";
 import BestProducts from "./Components/BestProducts/BestProducts";
+import Club from "./Components/Club/Club";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Products />
       <Category />
       <BestProducts />
+      <Club />
     </div>
   );
 }

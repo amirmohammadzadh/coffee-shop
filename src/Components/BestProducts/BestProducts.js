@@ -7,7 +7,7 @@ import "../../index.css";
 
 export default function BestProducts() {
   return (
-    <div className="container flex flex-col gap-y-12 my-10 p-[10px]">
+    <div className="container flex flex-col max-xs:gap-y-5 lg:gap-y-12 max-xs:my-3 lg:my-10 p-[10px]">
       {/* Best Products Title */}
       <div className="flex items-end justify-between w-full">
         <div className="">
@@ -19,15 +19,15 @@ export default function BestProducts() {
           </h4>
         </div>
         <div className="flex items-center gap-x-[18px]">
-          <IoIosArrowForward className="w-[26px] h-[26px] text-zinc-700 dark:text-white rounded-full flex items-center justify-center bg-white" />
-          <IoIosArrowBack className="w-[26px] h-[26px] text-zinc-700 dark:text-white rounded-full flex items-center justify-center bg-white" />
+          <IoIosArrowForward className="w-[26px] h-[26px] text-zinc-700 dark:text-white rounded-full flex items-center justify-center bg-white dark:bg-zinc-700" />
+          <IoIosArrowBack className="w-[26px] h-[26px] text-zinc-700 dark:text-white rounded-full flex items-center justify-center bg-white dark:bg-zinc-700" />
         </div>
       </div>
       {/* Best Products Components */}
       <div className="grid grid-rows-1 max-md:grid-cols-2 max-lg:grid-cols-3 lg:grid-cols-4 items-center gap-x-5">
         {bestProducts.map((product, index) => (
           <div
-          key={product.id}
+            key={product.id}
             className={`${index >= 2 ? "hidden-in-mobile-md" : ""} ${
               index >= 3 ? "hidden-in-mobile-lg" : ""
             }`}
