@@ -10,7 +10,7 @@ export default function Products() {
         <Title />
         <div className="grid items-stretch max-sm:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 max-md:gap-3.5 md:gap-5 pb-10">
           {products.map((product) => (
-            <Product {...product} />
+            <Product key={product.id} {...product} />
           ))}
         </div>
       </div>

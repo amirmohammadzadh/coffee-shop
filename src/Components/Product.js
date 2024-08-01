@@ -51,7 +51,11 @@ export default function Product({
                 </p>
               )}
             </div>
-          )) || <p className="text-red-400 max-xs:text-xs max-sm:text-base md:text-xl">فعلا موجود نیست</p>}
+          )) || (
+            <p className="text-red-400 max-xs:text-xs max-sm:text-base md:text-xl">
+              فعلا موجود نیست
+            </p>
+          )}
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center max-md:gap-x-2.5 md:gap-x-4 text-gray-400">

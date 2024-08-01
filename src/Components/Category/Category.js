@@ -6,7 +6,7 @@ export default function Category() {
     <div className="container flex flex-col items-center max-md:gap-y-10 md:gap-y-20 max-md:mb-4 md:my-20">
       <div className="grid max-lg:grid-cols-1 cursor-pointer text-white lg:grid-cols-2 gap-5 w-full container px-4">
         {categorys.map((category) => (
-          <div className="flex relative overflow-hidden max-sm:gap-y-4 sm:gap-y-7 justify-center max-md:p-7 md:p-12 flex-col max-sm:h-[132px] sm:h-[248px] w-full bg-no-repeat rounded-2xl">
+          <div key={category.id} className="flex relative overflow-hidden max-sm:gap-y-4 sm:gap-y-7 justify-center max-md:p-7 md:p-12 flex-col max-sm:h-[132px] sm:h-[248px] w-full bg-no-repeat rounded-2xl">
             <img
               src={category.img}
               alt="categore"
@@ -19,7 +19,7 @@ export default function Category() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center items-center flex-wrap gap-y-3">
+      <div className="flex w-full max-xl:justify-center xl:justify-between items-center flex-wrap gap-y-3">
         <div className="w-max cursor-pointer h-max flex items-center justify-center flex-col">
           <img
             src="./images/categories/category2.png"
@@ -27,7 +27,7 @@ export default function Category() {
             alt="category"
           />
           <h3 className="line-clamp-1 text-center max-md:text-sm  md:text-xl dark:text-white">
-            قهوه دمی واسپرسو{" "}
+            قهوه دمی واسپرسو
           </h3>
         </div>
         <div className="w-max cursor-pointer h-max flex items-center justify-center flex-col">
@@ -37,7 +37,7 @@ export default function Category() {
             alt="category"
           />
           <h3 className="line-clamp-1 max-md:text-sm  md:text-xl dark:text-white">
-            لوازم جانبی و تجهیزات{` `}
+            لوازم جانبی و تجهیزات
           </h3>
         </div>
         <div className="w-max cursor-pointer h-max flex items-center justify-center flex-col">

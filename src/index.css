@@ -102,3 +102,15 @@ body {
   border-radius: 30px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .hidden-in-mobile-md {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hidden-in-mobile-lg {
+    display: none;
+  }
+}
