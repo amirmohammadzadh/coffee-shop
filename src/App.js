@@ -5,6 +5,7 @@ import Products from "./Components/Products/Products";
 import Category from "./Components/Category/Category";
 import BestProducts from "./Components/BestProducts/BestProducts";
 import Club from "./Components/Club/Club";
+import Blogs from "./Components/Blogs/Blogs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Category />
       <BestProducts />
       <Club />
+      <Blogs />
     </div>
   );
 }
