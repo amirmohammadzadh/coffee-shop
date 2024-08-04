@@ -8,6 +8,7 @@ import Club from "./Components/Club/Club";
 import Blogs from "./Components/Blogs/Blogs";
 import Contact from "./Components/Contact/Contact";
 import Services from "./Components/Services/Services";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Blogs />
       <Contact />
       <Services />
+      <Footer />
     </div>
   );
 }
